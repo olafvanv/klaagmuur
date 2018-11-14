@@ -1,0 +1,9 @@
+<mat-list class="list-conainer">
+  <mat-list-item *ngFor="let klacht of klachten">
+    <mat-icon mat-list-icon>{{ getCategoryIcon(klacht.category) }}</mat-icon>
+    <h4 mat-line>{{ klacht.content }}</h4>
+    <p mat-line>{{ klacht.addedOn | date: "dd-MM-yyyy" }}</p>
+    <button mat-icon-button><mat-icon mat-list-icon>more_vert</mat-icon></button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>
