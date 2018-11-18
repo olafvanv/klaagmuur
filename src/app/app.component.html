@@ -1,10 +1,13 @@
-<mat-toolbar color="primary"> <span>Klaag maar raak</span> </mat-toolbar>
+<mat-toolbar color="primary"> 
+  <button mat-icon-button><mat-icon>announcement</mat-icon></button>
+  <span>Klaagmuur</span> 
+</mat-toolbar>
 
 <mat-tab-group mat-stretch-tabs>
   <mat-tab label="Klachten">
     <app-klachten-list></app-klachten-list>
   </mat-tab>
-  <mat-tab label="Excuusjes">
+  <mat-tab label="Excuusjes" [disabled]="true">
     <app-excuusjes-list></app-excuusjes-list>
   </mat-tab>
 </mat-tab-group>

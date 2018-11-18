@@ -1,9 +1,33 @@
-<mat-list class="list-conainer">
-  <mat-list-item *ngFor="let klacht of klachten">
+<mat-list class="list-container">
+  <mat-list-item class="klacht" *ngFor="let klacht of klachten" [@addListItem]>
+    <!-- Klacht information -->
     <mat-icon mat-list-icon>{{ getCategoryIcon(klacht.category) }}</mat-icon>
-    <h4 mat-line>{{ klacht.content }}</h4>
-    <p mat-line>{{ klacht.addedOn | date: "dd-MM-yyyy" }}</p>
-    <button mat-icon-button><mat-icon mat-list-icon>more_vert</mat-icon></button>
+    <h4 mat-line class="klacht-title" (click)="openDetails(klacht)">{{ klacht.content }}</h4>
+    <p mat-line class="klacht-date">{{ klacht.addedOn | date: "dd-MM-yyyy" }}</p>
+    <span *ngIf="klacht.highPriority"><mat-icon mat-list-icon color="warn">flag</mat-icon></span>
+
+    <!-- Klacht action menu -->
+    <button mat-icon-button [matMenuTriggerFor]="listMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #listMenu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>done</mat-icon>
+        <span>Opgelost</span>
+      </button>
+      <button mat-menu-item *ngIf="!klacht.highPriority" (click)="setPriority(klacht, 1)">
+        <mat-icon>priority_high</mat-icon>
+        <span>Hoge prioriteit</span>
+      </button>
+      <button mat-menu-item *ngIf="klacht.highPriority" (click)="setPriority(klacht, 0)">
+        <mat-icon>priority_high</mat-icon>
+        <span>Verwijder prioriteit</span>
+      </button>
+      <button mat-menu-item (click)="deleteKlacht(klacht)">
+        <mat-icon>delete</mat-icon>
+        <span>Verwijder</span>
+      </button>
+    </mat-menu>
     <mat-divider></mat-divider>
   </mat-list-item>
 </mat-list>

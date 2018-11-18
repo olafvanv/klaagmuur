@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { StorageServiceModule } from 'angular-webstorage-service'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,7 @@ import { CategoriesButtonComponent } from './categories-button/categories-button
 import { KlachtenListComponent } from './klachten-list/klachten-list.component';
 import { ExcuusjesListComponent } from './excuusjes-list/excuusjes-list.component';
 import { AddKlachtDialogComponent } from './_dialogs/add-klacht-dialog/add-klacht-dialog.component';
+import { KlachtDetailsDialogComponent } from './_dialogs/klacht-details-dialog/klacht-details-dialog.component';
 
 @NgModule({
   declarations: [
@@ -16,18 +19,22 @@ import { AddKlachtDialogComponent } from './_dialogs/add-klacht-dialog/add-klach
     CategoriesButtonComponent,
     KlachtenListComponent,
     ExcuusjesListComponent,
-    AddKlachtDialogComponent
+    AddKlachtDialogComponent,
+    KlachtDetailsDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    StorageServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    AddKlachtDialogComponent
+    AddKlachtDialogComponent,
+    KlachtDetailsDialogComponent
   ]
 })
 export class AppModule { }

@@ -1,32 +1,31 @@
 <div class="categories-circle-container">
-    <button mat-fab color="primary" class="open-categories-btn" (click)="toggleCategoryMenu()">
-      <mat-icon [@toggleCategoryMenu]="showCategoriesMenu ? 'rotate45' : ''">add</mat-icon>
+  <button mat-fab color="primary" class="open-categories-btn" (click)="toggleCategoryMenu()">
+    <mat-icon [@toggleCategoryMenu]="showCategoriesMenu ? 'rotate45' : ''">add</mat-icon>
+  </button>
+  
+  <!-- <span class="category-buttons" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible' : 'hidden'"> -->
+  <span class="category-buttons">
+    <button mat-fab class="category-button one" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn1' : 'hidden'" (click)="openKlachtDialog('Eten')">
+      <mat-icon>fastfood</mat-icon>
+      <p>Eten</p>
     </button>
-    
-    <!-- <span class="category-buttons" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible' : 'hidden'"> -->
-    <span class="category-buttons">
-      <button mat-fab class="category-button one" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn1' : 'hidden'" (click)="openKlachtDialog('eten')">
-        <mat-icon>fastfood</mat-icon>
-        <p>Eten</p>
-      </button>
-      <button mat-fab class="category-button two" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn2' : 'hidden'">
-        <mat-icon>local_bar</mat-icon>
-        <p>Drinken</p>
-      </button>
-      <button mat-fab class="category-button three" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn3' : 'hidden'">
-        <mat-icon>hotel</mat-icon>
-        <p>Slaap</p>
-      </button>
-      <button mat-fab class="category-button four" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn4' : 'hidden'">
-        <mat-icon>group</mat-icon>
-        <p>Mensen</p>
-      </button>
-      <button mat-fab class="category-button five" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn5' : 'hidden'">
-        <mat-icon>help</mat-icon>
-        <p>Overig</p>
-      </button>
-    </span>
-  </div>
-  
-  <div class="overlay" (click)="showCategoriesMenu = false" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible' : 'hidden'"></div>
-  
+    <button mat-fab class="category-button two" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn2' : 'hidden'" (click)="openKlachtDialog('Drinken')">
+      <mat-icon>local_bar</mat-icon>
+      <p>Drinken</p>
+    </button>
+    <button mat-fab class="category-button three" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn3' : 'hidden'" (click)="openKlachtDialog('Slaap')">
+      <mat-icon>hotel</mat-icon>
+      <p>Slaap</p>
+    </button>
+    <button mat-fab class="category-button four" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn4' : 'hidden'" (click)="openKlachtDialog('Mensen')">
+      <mat-icon>group</mat-icon>
+      <p>Mensen</p>
+    </button>
+    <button mat-fab class="category-button five" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible-btn5' : 'hidden'" (click)="openKlachtDialog('Overig')">
+      <mat-icon>help</mat-icon>
+      <p>Overig</p>
+    </button>
+  </span>
+</div>
+
+<div class="overlay" (click)="showCategoriesMenu = false" [@toggleCategoryMenu]="showCategoriesMenu ? 'visible' : 'hidden'"></div>

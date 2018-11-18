@@ -1,9 +1,17 @@
-<h2 mat-dialog-title>{{category}}</h2>
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="close()"><mat-icon>clear</mat-icon></button>
+  <span class="dialog-title">Voeg klacht toe</span> 
+  <button mat-icon-button [disabled]="!klachtForm.form.valid" (click)="klachtForm.ngSubmit.emit()"><mat-icon>check</mat-icon></button>
+</mat-toolbar>
 
 <mat-dialog-content>
-  <input type="text" placeholde="no oansdf">
-</mat-dialog-content>
+  <form #klachtForm="ngForm" (ngSubmit)="addKlacht()">
+    <mat-form-field class="input-full-width">
+      <input matInput placeholder="Categorie" [(ngModel)]="klacht.category" name="categorie" disabled>
+    </mat-form-field>
 
-<mat-dialog-actions>
-  <button class="mat-raised-button" color="primary" (click)="close()">Close</button>
-</mat-dialog-actions>
+    <mat-form-field class="input-full-width">
+      <textarea matInput placeholder="Plaats hier je klacht" [(ngModel)]="klacht.content" name="klacht" autofocus required></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
