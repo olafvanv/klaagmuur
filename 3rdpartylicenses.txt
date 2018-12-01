@@ -432,6 +432,9 @@ MIT
 
 @angular/material/divider
 
+@angular/service-worker
+MIT
+
 @angular/fire/firestore
 MIT
 
