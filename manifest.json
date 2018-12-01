@@ -5,8 +5,8 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/klaagmuur/",
+  "start_url": "/klaagmuur/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
