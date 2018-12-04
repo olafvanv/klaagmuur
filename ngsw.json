@@ -6,14 +6,7 @@
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
-      "urls": [
-        "https://olafvanv.github.io/klaagmuur/favicon.ico",
-        "https://olafvanv.github.io/klaagmuur/index.html",
-        "https://olafvanv.github.io/klaagmuur/main.b39597646bb17da7250f.js",
-        "https://olafvanv.github.io/klaagmuur/polyfills.c6871e56cb80756a5498.js",
-        "https://olafvanv.github.io/klaagmuur/runtime.ec2944dd8b20ec099bf3.js",
-        "https://olafvanv.github.io/klaagmuur/styles.b2eca731e3cb949e0cac.css"
-      ],
+      "urls": [],
       "patterns": []
     },
     {
@@ -44,13 +37,7 @@
     "https://olafvanv.github.io/klaagmuur/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
     "https://olafvanv.github.io/klaagmuur/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "https://olafvanv.github.io/klaagmuur/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "https://olafvanv.github.io/klaagmuur/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "https://olafvanv.github.io/klaagmuur/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://olafvanv.github.io/klaagmuur/index.html": "85fbb14ece32552f8199cbfd10ee0d8c78548516",
-    "https://olafvanv.github.io/klaagmuur/main.b39597646bb17da7250f.js": "7869447e691a671124fdb8f5e4bef7adb9ac466e",
-    "https://olafvanv.github.io/klaagmuur/polyfills.c6871e56cb80756a5498.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
-    "https://olafvanv.github.io/klaagmuur/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "https://olafvanv.github.io/klaagmuur/styles.b2eca731e3cb949e0cac.css": "823ed06d641c01aab4d4041a6236c9e8903d49ae"
+    "https://olafvanv.github.io/klaagmuur/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41"
   },
   "navigationUrls": [
     {
